@@ -1,0 +1,39 @@
+#bundle() {
+    .alertDiv {
+        width: 100%;
+        font-size: 2em;
+        text-align: center;
+        height: 5vh;
+    }
+
+}
+
+//could just copy css spinner/loader online, but goal was to keep things simple
+.loading {
+    background: #e7f346;
+    #bundle.alertDiv();
+}
+
+.error {
+    background: #db0f0f;
+    #bundle.alertDiv();
+
+    & button {
+        float: right;
+        height: 100%;
+        width: 4em;
+    }
+
+    margin-top: -1em;
+}
+
+
+.loadedCity {
+    font-size: 1.2em;
+
+    & select {
+        font-size: 1em;
+        color: white;
+        background: #3298dc;
+    }
+}

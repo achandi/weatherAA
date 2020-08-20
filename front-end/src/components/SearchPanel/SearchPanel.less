@@ -1,0 +1,58 @@
+@btncolor: #ccc;
+@color: white;
+@background-dark: linear-gradient(141deg, #009e6d, #0f1f1c 68%, #00e7eb);
+@background-light: linear-gradient(141deg, #3298dc, #00d1b3 80%, #00e7db);
+
+
+.searchPanel {
+    border: 2px inset yellow;
+    background: @background-light;
+    max-width: 85%;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+    font-size: 1em;
+    padding: 1rem;
+    color: @color;
+    text-align: center;
+
+    & .searchTitle {
+        background: @background-dark;
+        margin: 1em;
+        font-size: 1.4em;
+        width: 100%;
+    }
+
+}
+
+.searchInput {
+    flex-flow: row;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.searchInput button {
+    background-color: @btncolor;
+    padding: auto;
+}
+
+.searchInput input,
+.searchInput select,
+.searchInput button {
+    background-color: #3298dc;
+    color: @color;
+    font-size: .9em;
+    border: 1px solid @btncolor;
+}
+
+.searchInput input:focus {
+    outline: none;
+    border-color: #ff2058;
+}
+
+@media (min-width: 768px) {
+    .searchInput {
+        flex-direction: row;
+    }
+}
