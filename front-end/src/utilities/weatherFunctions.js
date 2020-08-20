@@ -72,7 +72,10 @@ export const getDayValues = (day, measurement) => {
     "d"
   )}@2x.png`;
   return {
-    forecastFrom: day.time[0] === "2:00 am" ? false : day.time[0],
+    forecastFrom:
+      day.time[0] === "2:00 am" || day.time[0] === "2:00 AM"
+        ? false
+        : day.time[0],
     displayWeather: mostFrequent.toUpperCase(),
     highTemp: Math.round(Math.max(...day.temp)) + measurement.temp,
     lowTemp: Math.round(Math.min(...day.temp)) + measurement.temp,
