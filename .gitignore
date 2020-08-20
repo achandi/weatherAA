@@ -5,6 +5,7 @@
 .env.development
 /node_modules
 node_modules
+.env.production
 
 
 npm-debug.log*
