@@ -73,7 +73,7 @@ export const getDayValues = (day, measurement) => {
   )}@2x.png`;
   return {
     forecastFrom:
-      day.time[0] === "2:00 am" || day.time[0] === "2:00 AM"
+      day.time[0].replace(/[.]/g, "").toLowerCase() === "2:00 am"
         ? false
         : day.time[0],
     displayWeather: mostFrequent.toUpperCase(),

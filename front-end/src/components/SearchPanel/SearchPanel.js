@@ -12,7 +12,6 @@ const SearchPanel = (props) => {
           5 day Forecast - Search Cities
         </span>
         <div className={styles.searchInput}>
-          {props.children}
           <datalist id="suggestions">
             {suggestedCities.map((selectedCity) => (
               <option key={selectedCity} value={selectedCity}>
@@ -29,6 +28,7 @@ const SearchPanel = (props) => {
             ))}
           </select>
           <input
+            placeholder="Select List or Enter Text"
             onChange={(event) => setSearchQuery(event.target.value)}
             autoComplete="on"
             list="suggestions"
@@ -37,6 +37,7 @@ const SearchPanel = (props) => {
           <button onClick={() => props.setCity(searchQuery.toLowerCase())}>
             Search
           </button>
+          {props.children}
         </div>
       </Panel>
     </div>
